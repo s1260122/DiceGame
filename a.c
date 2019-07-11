@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 int main(){
-int i,j,k;
+int i,j,k,l;
 char name[20];
 srand(time(NULL));
 printf("What is your name? \n");
@@ -13,9 +13,11 @@ i=rand()%6+1;
 printf("Die 1: %d\n",i);
 j=rand()%6+1;
 printf("Die 2: %d\n",j);
-k=i+j;
-printf("Total value: %d\n",k);
-if(k>=7){
+k=rand()%6+1;
+printf("Die 3: %d\n",k);
+l=i+j+k;
+printf("Total value: %d\n",l);
+if(k>=10){
   printf("%s won!\n",name);
 }
 else printf("%s lost!\n",name);
